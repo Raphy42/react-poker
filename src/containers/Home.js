@@ -36,7 +36,15 @@ const Home = () => (
                   </CardMedia>
                   <Divider/>
                   <CardText>
-                      <ActionHistory history={[
+                  </CardText>
+                  <CardTitle>player.actions</CardTitle>
+                  <CardActions>
+                      <Player/>
+                  </CardActions>
+              </Card>
+          </Tab>
+          <Tab label="history">
+              <ActionHistory history={[
                           {
                               what: 'folded',
                               who: {
@@ -74,15 +82,6 @@ const Home = () => (
                               }
                           }
                       ]}/>
-                  </CardText>
-                  <CardTitle>player.actions</CardTitle>
-                  <CardActions>
-                      <Player/>
-                  </CardActions>
-              </Card>
-          </Tab>
-          <Tab label="Room">
-
           </Tab>
       </Tabs>
   </Provider>
