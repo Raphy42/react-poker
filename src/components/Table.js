@@ -4,12 +4,18 @@
 
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import Paper from 'material-ui/Paper'
 
 import Card from './Card'
 
 const mapStateToProps = (state, props) => ({
   cards: state.game.cards
 });
+
+const paperStyle = {
+    backgroundColor: 'green',
+    height: 500
+};
 
 class Table extends Component {
   props: {
@@ -18,11 +24,9 @@ class Table extends Component {
 
   render() {
     return (
-      <div className="table">
-        <div className="board">
-          { this.props.cards.map(card => <Card card={card} />) }
-        </div>
-      </div>
+        <Paper style={paperStyle} zDepth={0}>
+          { this.props.cards.map((card, index) => <Card card={card} key={index}/>) }
+        </Paper>
     )
   }
 }
