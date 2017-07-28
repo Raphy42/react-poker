@@ -15,7 +15,7 @@ export type GameState = {
 export const initialGameState: GameState = {
   hands: 0,
   turn: 0,
-  cards: [],
+  cards: ['5H', '3S', 'KD', 'JC', 'TD'],
   bank: 0,
   currentPlayer: 0
 };

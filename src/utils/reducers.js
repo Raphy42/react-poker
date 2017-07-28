@@ -3,10 +3,8 @@
  */
 
 import { propOr, identity } from 'ramda'
-import debug from 'debug'
 
 export function createReducer(initialState, handlers) {
-  debug('playground')(initialState, handlers);
   return function reducer(state = initialState, action) {
     return propOr(identity, action.type, handlers)(state, action)
   }

@@ -18,7 +18,7 @@ class Table extends Component {
 
   render() {
     return (
-      <div className = "table">
+      <div className="table">
         <div className="board">
           { this.props.cards.map(card => <Card card={card} />) }
         </div>
